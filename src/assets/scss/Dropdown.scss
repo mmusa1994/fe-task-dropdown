@@ -1,0 +1,140 @@
+.select-container {
+  display: inline-block;
+  position: relative;
+  width: 49%;
+  border-radius: 5px;
+  margin: auto;
+
+  &.primary {
+    background-color: #272776;
+
+    &:hover {
+      box-shadow: 0 0 10px #f6b196;
+    }
+  }
+  &.outline {
+    background-color: white;
+    border: 1px solid;
+    border-color: #f6b196;
+
+    &:hover {
+      box-shadow: 0 0 10px #272776;
+    }
+  }
+
+  .selected-text {
+    padding: 2.5% 5%;
+    cursor: pointer;
+
+    &.primary {
+      color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 5%;
+        top: 45%;
+        border: 7px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+    }
+
+    &.outline {
+      color: #000;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 5%;
+        top: 45%;
+        border: 7px solid transparent;
+        border-color: #000 transparent transparent transparent;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .select-options {
+    position: absolute;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+
+    &.primary {
+      background-color: #6969bb;
+    }
+    &.outline {
+      background-color: white;
+    }
+
+    &.show-dropdown-options {
+      min-height: 50px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.hide-dropdown-options {
+      min-height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .item {
+      list-style-type: none;
+      padding: 6px 20px;
+      border-bottom: 1px solid #e4e4e4;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4141c6;
+      }
+
+      &.primary {
+        color: #fff;
+        background-color: #6969bb;
+
+        &:hover {
+          background-color: #4141c6;
+        }
+      }
+
+      &.outline {
+        color: #000;
+        background-color: #f6b196;
+
+        &:hover {
+          background-color: #c07a5e;
+        }
+      }
+    }
+  }
+}
+
+// CSS transition
+.dropdown-items-enter {
+  height: 0;
+  transition: all 300ms;
+}
+.dropdown-items-enter-active {
+  height: 199px;
+  transition: all 300ms;
+}
+.dropdown-items-exit {
+  height: 199px;
+  transition: all 300ms;
+}
+.dropdown-items-exit-active {
+  height: 0;
+  transition: all 300ms;
+}
