@@ -25,4 +25,4 @@ yarn-error.log*
 #hosting
 /.firebaserc
 /firebase.json
-/firebase
+/.firebase
