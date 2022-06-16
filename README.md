@@ -1,11 +1,6 @@
-# Please clone the repository on your machine and run:
-
-<strong>npm install</strong>
-
-# after that run:
-
-<strong>npm start</strong>
-
-# But you have app deployed on:
-
+<em>Please clone the repository on your machine and run</em>
+npm install
+<em>after that run:</em>
+ npm start
+<em>Deployed on:</em>
 https://fe-task-dropdown.web.app/
